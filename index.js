@@ -14,7 +14,7 @@ const conetion_sequelize  = require('./database');
 
 const app = express();
 
-
+//app.use(conetion_sequelize);
 app.use(cors());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());

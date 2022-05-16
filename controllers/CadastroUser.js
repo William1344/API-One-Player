@@ -4,7 +4,7 @@ const UsersV = require('../obj_resposta/UserV');
 module.exports = {
   async CadastroUser(req, res) {
     console.log("post entrou cadastro", req.body.new_user.email);
-  
+
       // verifica se tem um usuário com este email || telefone
       const proc = await Users.findAll({where : {email : req.body.new_user.email}});
       if(proc.length != 0){

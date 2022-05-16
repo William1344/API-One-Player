@@ -66,12 +66,13 @@ routes.post('/salvar_image_user', upload.array('photo', 3), (req, res) => {
 });
 
 routes.get('/', (req, res) => {
-  return res.send({msg:"Infos: " +
-    "nome: API One Player Basketball " +
+  console.log("Entrou aqui!! williamns");
+  return res.send("Infos: " + 
+    "nome: API One Player Basketball \n" +
     "versao: 1.0.0 " +
     "criador: William1344 " +
-    "msg: pai ta onn! "
-  })
+    "msg: PAI TA ONN! "
+  );
 });
 
 
