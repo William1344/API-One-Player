@@ -33,8 +33,8 @@ module.exports = {
       if(lg.jogos_da_liga.length != (req.body.jogos3x3 + req.body.jogos5x5)){
         let liga = ReloadLiga(req.body.idLiga);
         return res.send({
-          status : true,
-          liga  : await ReloadLiga(req.body.idLiga)
+          status  : true,
+          liga    : await ReloadLiga(req.body.idLiga)
         });
       }
       if(tam != req.body.pedidos){

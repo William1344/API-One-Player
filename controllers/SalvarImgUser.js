@@ -3,7 +3,20 @@ const { Op }    = require('sequelize');
 
 module.exports = {
   async SalvarImgUser(req, res) {
-    console.log("Me chamou");  
+    console.log("Chamou!!!\n", req.body);
+    const user = await Users.findOne({
+      where: { id: req.body.idUser }
+    });
+
+    if (user) {
+      user.update({
+        image: req.body.value
+      });
+      user.save();
+      return res.send({ status: true, msg: "Imagem alterada com sucesso!" });
+    }else{
+      return res.send({status: false, msg: "Erro ao salvar sua foto"});
+    }
     
   
   }

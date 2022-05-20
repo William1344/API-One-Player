@@ -1,17 +1,4 @@
 const express = require('express');
-const multer  = require('multer');
-
-const storage = multer.diskStorage({
-  destination: function(req, file, callback) {
-    callback(null, './images');
-  },
-  filename: function(req, file, callback) {
-    callback(null, `${file.fieldname}_${Date.now()}_${file.originalname}`);
-  }
-});
-
-const upload = multer({ storage });
-
 const routes = express.Router();
 /*
 const { 
@@ -35,7 +22,7 @@ const { ResgataLiga}			= require('./controllers/ResgataLiga');
 const { RetornaLigas}			= require('./controllers/RetornaLigas');
 const { SalvarInfosUser} 	= require('./controllers/SalvarInfosUser');
 const { SetConfLiga}      = require('./controllers/SetConfLiga');
-//const { SalvarImgUser}  = require('./controllers/SalvarImgUser');
+const { SalvarImgUser}    = require('./controllers/SalvarImgUser');
 const { SalvarImgLiga}		= require('./controllers/SalvarImgLiga');
 const { PersistLiga}			= require('./controllers/PersistLiga');
 const { PersistUser}			= require('./controllers/PersistUser');
@@ -51,27 +38,23 @@ routes.post('/criar_pedido',        RealizaPedido);
 routes.post('/cancela_pedido',      CancelaPedido);
 routes.post('/salvar_infos_user',   SalvarInfosUser);
 routes.post('/resgata_liga',        ResgataLiga);
-
 routes.post('/getLigas',            RetornaLigas);
 routes.post('/getUsers',            RetornaUsers);
 routes.post('/salvar_conf_liga',    SetConfLiga);
+routes.post('/persistLiga',         PersistLiga);
+routes.post('/persistUser',         PersistUser);
+routes.post('/salvar_img_user',     SalvarImgUser);
 
-routes.post('/persistLiga',          PersistLiga);
-routes.post('/persistUser',          PersistUser);
 
-routes.post('/salvar_image_user', upload.array('photo', 3), (req, res) => {
-  console.log(req.files);
-  console.log(req.body);
-  res.send({status: true});
-});
+
+
 
 routes.get('/', (req, res) => {
   console.log("Entrou aqui!! williamns");
   return res.send("Infos: " + 
     "nome: API One Player Basketball \n" +
     "versao: 1.0.0 " +
-    "criador: William1344 " +
-    "msg: PAI TA ONN! "
+    "criador: William1344 "
   );
 });
 

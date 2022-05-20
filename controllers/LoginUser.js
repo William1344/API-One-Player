@@ -268,6 +268,7 @@ async function computar_destaques(liga){
 module.exports = {
   async LoginUser(req, res) {
     // verifica se tem um usuário com este email and password
+    console.log("Entrou aqui")
     const user = await Users.findOne({
       where: {[Op.and]:[{email:req.body.email},{password:req.body.password}]},
       include: [
