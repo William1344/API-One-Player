@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": "cavalo",
-    "database": "tester",
-    "host": "localhost",
+    "username": "william1344",
+    "password": "cavalocriolo01@",
+    "database": "one_player",
+    "host": "oneplayermysql.mysql.database.azure.com",
     "dialect": "mysql"
   }
 }
