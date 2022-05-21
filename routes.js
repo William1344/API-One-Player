@@ -44,7 +44,7 @@ routes.post('/salvar_conf_liga',    SetConfLiga);
 routes.post('/persistLiga',         PersistLiga);
 routes.post('/persistUser',         PersistUser);
 routes.post('/salvar_img_user',     SalvarImgUser);
-
+routes.post('/salvar_img_liga',     SalvarImgLiga);
 
 
 

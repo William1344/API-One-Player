@@ -10,14 +10,12 @@ module.exports = {
 
     if (user) {
       user.update({
-        image: req.body.value
+        image: req.body.val
       });
       user.save();
       return res.send({ status: true, msg: "Imagem alterada com sucesso!" });
     }else{
       return res.send({status: false, msg: "Erro ao salvar sua foto"});
     }
-    
-  
   }
 };
