@@ -42,7 +42,7 @@ module.exports = (sequelize, DataTypes) => {
     image: {
       type: DataTypes.BLOB('long'),
       allowNull: true,
-      defaultValue: null,
+      defaultValue: 0,
     },
     num_camisa: {
       type: DataTypes.INTEGER,

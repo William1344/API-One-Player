@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
     img_liga: { // seta como null, eo app seta image padrão
       type: DataTypes.BLOB('long'),
       allowNull: true,
-      defaultValue: null,
+      defaultValue: 0,
     },
     nome: { // obrigatório
       type: DataTypes.STRING,
