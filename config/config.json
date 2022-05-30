@@ -3,7 +3,7 @@
     "username": "root",
     "password": "cavalopangare",
     "database": "one_player",
-    "host": "https://node103496-env-7548042.jelastic.saveincloud.net/",
+    "host": "https://node103496-env-7548042.jelastic.saveincloud.net",
     "dialect": "mysql"
   }
 }
