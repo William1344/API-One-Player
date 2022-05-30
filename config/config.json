@@ -3,7 +3,7 @@
     "username": "root",
     "password": "KDEtgs15966",
     "database": "one_player",
-    "host": "localhost",
+    "host": "https://node103498-env-9718186.jelastic.saveincloud.net/",
     "dialect": "mysql"
   }
 }
