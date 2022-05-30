@@ -1,9 +1,9 @@
 {
   "development": {
     "username": "root",
-    "password": "cavalopangare",
+    "password": "KDEtgs15966",
     "database": "one_player",
-    "host": "https://node103496-env-7548042.jelastic.saveincloud.net",
+    "host": "https://node103498-env-9718186.jelastic.saveincloud.net/",
     "dialect": "mysql"
   }
 }
